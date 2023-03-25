@@ -1,5 +1,4 @@
 require('core.set')
-require('core.plugin_config')
 require('core.keymaps')
 
 -- [[ Highlight on yank ]]
