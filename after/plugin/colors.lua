@@ -12,4 +12,3 @@ function ColorMyPencils(color)
 end
 
 ColorMyPencils()
-print("Colors My Pencils Ran")
