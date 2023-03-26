@@ -165,7 +165,14 @@ require('lazy').setup({
     end,
   },
 
+  -- Manages floating terminal
   { 'akinsho/toggleterm.nvim', version = "v1.*", config = true },
+
+  -- To manage long list of undos
+  { "mbbill/undotree" },
+
+  -- Manages jumping between files
+  { "theprimeagen/harpoon" },
 
   require 'kickstart.plugins.autoformat',
 
