@@ -15,12 +15,15 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagn
 
 -- [[ Custom Keymaps ]]
 -- Move vertically while also centering
-vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', {noremap = true})
+vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true })
 
 -- Move selection up and down with ease
-vim.api.nvim_set_keymap('v', 'J', ":m '>+1<CR>gv=gv", {noremap = true})
-vim.api.nvim_set_keymap('v', 'K', ":m '<-2<CR>gv=gv", {noremap = true})
+vim.api.nvim_set_keymap('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })
+vim.api.nvim_set_keymap('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- Use normal Ctrl+Backspace to erase words easily while writing
 vim.api.nvim_set_keymap('i', '<C-BS>', '<C-o>diw', {})
+
+-- Map Ctrl + a to yank the whole buffer to the clipboard
+vim.api.nvim_set_keymap('n', '<C-a>', ':%y+<CR>', { noremap = true, silent = true })

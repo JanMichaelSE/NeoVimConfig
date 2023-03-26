@@ -165,6 +165,8 @@ require('lazy').setup({
     end,
   },
 
+  { 'akinsho/toggleterm.nvim', version = "v1.*", config = true },
+
   require 'kickstart.plugins.autoformat',
 
   { import = 'custom.plugins' },
