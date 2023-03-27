@@ -4,6 +4,13 @@
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 
+Important things to install:
+ - Chocolatey Package Manager
+ - Clang & Gcc
+ - ripgrep & grep
+ - git & node
+ - Nerd Font CascaydiaCove NF
+
 Important Steps for new device:
   - Setup up Path variables for the following:
   - Easy way to get back to config when you need too.
@@ -80,7 +87,8 @@ require('lazy').setup({
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip',
+      'rafamadriz/friendly-snippets' },
   },
 
   -- Useful plugin to show you pending keybinds.
