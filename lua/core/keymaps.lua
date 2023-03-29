@@ -32,3 +32,6 @@ vim.keymap.set('n', '<C-a>', ':%y+<CR>', { noremap = true, silent = true })
 
 -- Paste without replacing system clipboard
 vim.keymap.set('n', '<leader>p', '"_dP', { silent = true })
+
+-- Save using Ctrl + s like all other platforms
+vim.keymap.set('n', '<C-s>', ':w<CR>', { noremap = true })
