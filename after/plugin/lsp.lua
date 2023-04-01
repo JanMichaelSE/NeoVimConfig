@@ -49,22 +49,17 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
-  angularls = {},
+  marksman = {},
+  pyright = {},
   rust_analyzer = {},
   tsserver = {},
   html = {},
   cssls = {},
   eslint = {},
-  cssmodules_ls = {},
   emmet_ls = {},
   grammarly = {},
   jsonls = {},
   prismals = {},
-  stylelint_lsp = {},
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
