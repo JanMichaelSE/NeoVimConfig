@@ -6,27 +6,22 @@
 
 Important things to install:
  - Chocolatey Package Manager
- - Clang & Gcc
- - ripgrep & grep
+ - Install through Choco: Zig & Gcc
+ - Install through Choco: ripgrep
+ - Install through Choco: lazygit
+ - Install Cmake
  - git & node
  - Nerd Font CascaydiaCove NF
+ - Install VS Build Tools with C++ Tools included
 
 Important Steps for new device:
   - Setup up Path variables for the following:
-  - Easy way to get back to config when you need too.
   - Things like Cmake, Gcc and Clang
 
 Important Resources for Windows Setup
   - https://github.com/nvim-lua/kickstart.nvim
-  - https://learnxinyminutes.com/docs/lua/
   - https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support
-
-Important Script to make Opening Folders with NeoVim Easier:
-  New-Item -Path 'Registry::HKEY_CLASSES_ROOT\Directory\shell\Neovim' -Force | Out-Null
-  Set-ItemProperty -Path 'Registry::HKEY_CLASSES_ROOT\Directory\shell\Neovim' -Name '(default)' -Value 'Open with Neovim' -Force | Out-Null
-  Set-ItemProperty -Path 'Registry::HKEY_CLASSES_ROOT\Directory\shell\Neovim' -Name 'Icon' -Value 'C:\Program Files\Neovim\bin\nvim-qt.exe,0' -Force | Out-Null
-  New-Item -Path 'Registry::HKEY_CLASSES_ROOT\Directory\shell\Neovim\Command' -Force | Out-Null
-  Set-ItemProperty -Path 'Registry::HKEY_CLASSES_ROOT\Directory\shell\Neovim\Command' -Name '(default)' -Value '"C:\Program Files\Neovim\bin/nvim-qt.exe" "%1"' -Force | Out-Null
+  - https://github.com/nvim-telescope/telescope-fzf-native.nvim
 
 --]]
 -- Set <space> as the leader key
