@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<leader>t', ':Neotree toggle<CR>', {noremap = true})
+vim.keymap.set('n', '<leader>f', ':Neotree toggle<CR>', { noremap = true })

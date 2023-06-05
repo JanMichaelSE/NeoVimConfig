@@ -27,8 +27,8 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true })
 -- Use normal Ctrl+Backspace to erase words easily while writing
 vim.keymap.set('i', '<C-BS>', '<C-o>diw', {})
 
--- Map Ctrl + a to yank the whole buffer to the clipboard
-vim.keymap.set('n', '<C-a>', ':%y+<CR>', { noremap = true, silent = true })
+-- Map Ctrl + a to highlight the whole buffer
+vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
 -- Paste without replacing system clipboard
 vim.keymap.set('n', '<leader>p', '"_dP', { silent = true })
