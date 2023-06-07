@@ -25,7 +25,7 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- Use normal Ctrl+Backspace to erase words easily while writing
-vim.keymap.set('i', '<C-BS>', '<C-o>diw', {})
+vim.keymap.set('i', '<C-BS>', '<C-w>', { noremap = true, silent = true })
 
 -- Map Ctrl + a to highlight the whole buffer
 vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })

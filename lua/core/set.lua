@@ -19,6 +19,15 @@ vim.o.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Set the number of spaces that a tab is equal to. By default, this value is 8.
+vim.opt.tabstop = 4
+
+-- Set the number of spaces to use for each step of (auto)indent. 'tabstop' is also set to the same value.
+vim.opt.shiftwidth = 4
+
+-- If set, spaces are used in place of tabs.
+vim.opt.expandtab = true
+
 -- Save undo history
 vim.o.undofile = true
 
