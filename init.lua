@@ -4,7 +4,7 @@
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 
-Important things to install:
+Important things to install (A powershell script has been created so refer to the installation.ps1 file):
  - Chocolatey Package Manager
  - Install through Choco: Zig & Gcc
  - Install through Choco: ripgrep
@@ -173,7 +173,7 @@ require('lazy').setup({
   -- Manages jumping between files
   { "theprimeagen/harpoon" },
 
-  require 'kickstart.plugins.autoformat',
+  require 'kickstart.plugins.debug',
 
   { import = 'custom.plugins' },
 }, {})
