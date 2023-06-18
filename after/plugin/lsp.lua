@@ -10,6 +10,7 @@ lsp.preset({
 })
 
 lsp.ensure_installed({
+  'lua_ls',
   'marksman',
   'pyright',
   'rust_analyzer',
@@ -20,7 +21,8 @@ lsp.ensure_installed({
   'grammarly',
   'jsonls',
   'prismals',
-  'tailwindcss'
+  'tailwindcss',
+  'jdtls',
 })
 
 -- Fix Undefined global 'vim' issue

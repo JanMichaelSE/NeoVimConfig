@@ -165,7 +165,7 @@ require('lazy').setup({
   },
 
   -- Manages floating terminal
-  { 'akinsho/toggleterm.nvim', version = "v1.*", config = true },
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
 
   -- To manage long list of undos
   { "mbbill/undotree" },
