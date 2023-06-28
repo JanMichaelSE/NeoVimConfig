@@ -165,7 +165,7 @@ require('lazy').setup({
   },
 
   -- Manages floating terminal
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+  { 'akinsho/toggleterm.nvim',    version = "*", config = true },
 
   -- To manage long list of undos
   { "mbbill/undotree" },
@@ -173,9 +173,26 @@ require('lazy').setup({
   -- Manages jumping between files
   { "theprimeagen/harpoon" },
 
-  require 'kickstart.plugins.debug',
+  -- Allows to visualize colorscheme
+  { "norcalli/nvim-colorizer.lua" },
 
-  { import = 'custom.plugins' },
+
+  -- File Explorer Tree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    version = "*",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require('neo-tree').setup {}
+    end,
+  },
+
+  -- require 'kickstart.plugins.debug',
+
 }, {})
 
 -- [[ Require Core Configuration ]]
