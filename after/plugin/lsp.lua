@@ -22,7 +22,7 @@ lsp.ensure_installed({
   'jsonls',
   'prismals',
   'tailwindcss',
-  'jdtls',
+  'gopls',
 })
 
 -- Fix Undefined global 'vim' issue

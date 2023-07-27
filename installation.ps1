@@ -13,16 +13,24 @@ choco install zig
 choco install mingw
 choco install cmake
 choco install ripgrep
+choco install fd
 choco install lazygit
 choco install cascadia-code-nerd-font
 choco install visualstudio2022buildtools
 
 # Install Programs 
+choco install microsoft-windows-terminal
 choco install vivaldi
 choco install postman
 choco install notion
 choco install spotify
 choco install whatsapp
+choco install vscode
+choco install powertoys
+choco install docker-desktop
+choco install docker-cli
+choco install lightshot
+choco install postgresql
 
 # Install Languages
 choco install python3
