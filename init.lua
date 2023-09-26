@@ -4,15 +4,17 @@
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 
-Important things to install (A powershell script has been created so refer to the installation.ps1 file):
- - Chocolatey Package Manager
- - Install through Choco: Zig & Gcc
- - Install through Choco: ripgrep
- - Install through Choco: lazygit
- - Install Cmake
- - git & node
- - Nerd Font CascaydiaCove NF
- - Install VS Build Tools with C++ Tools included
+TODO: Create a installation file for WSL and Linux (Ubuntu)
+
+Important things to install (A powershell script has been created so refer to the installation.ps1 file for Windows):
+ - Chocolatey Package Manager (Windows Only)
+ - Install through Choco: Zig & Gcc (Windows and Linux need Zig)
+ - Install through Choco: ripgrep (Windows and Linux)
+ - Install through Choco: lazygit (Windows and Linux)
+ - Install Cmake (Windows Only)
+ - git & node (Windows and Linux)
+ - Nerd Font CascaydiaCove NF (Window and Linux)
+ - Install VS Build Tools with C++ Tools included (Windows Only)
 
 Important Steps for new device:
   - Setup up Path variables for the following:
@@ -22,6 +24,9 @@ Important Resources for Windows Setup
   - https://github.com/nvim-lua/kickstart.nvim
   - https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support
   - https://github.com/nvim-telescope/telescope-fzf-native.nvim
+
+Important Troubleshooting for Linux:
+  - https://github.com/LunarVim/LunarVim/issues/3680
 
 --]]
 -- Set <space> as the leader key
@@ -51,11 +56,6 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
-
-  -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -177,7 +177,7 @@ require('lazy').setup({
   { 'akinsho/toggleterm.nvim',    version = "*", config = true },
 
   -- To manage long list of undos
-  { "mbbill/undotree" },
+  -- { "mbbill/undotree" },
 
   -- Manages jumping between files
   { "theprimeagen/harpoon" },
@@ -199,8 +199,6 @@ require('lazy').setup({
       require('neo-tree').setup {}
     end,
   },
-
-  -- require 'kickstart.plugins.debug',
 
 }, {})
 

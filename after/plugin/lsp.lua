@@ -12,8 +12,6 @@ lsp.preset({
 lsp.ensure_installed({
   'lua_ls',
   'marksman',
-  'pyright',
-  'rust_analyzer',
   'tsserver',
   'html',
   'cssls',
