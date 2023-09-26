@@ -15,6 +15,8 @@ Important things to install (A powershell script has been created so refer to th
  - git & node (Windows and Linux)
  - Nerd Font CascaydiaCove NF (Window and Linux)
  - Install VS Build Tools with C++ Tools included (Windows Only)
+ - Install github cli for (Linux)
+    - https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
 Important Steps for new device:
   - Setup up Path variables for the following:
