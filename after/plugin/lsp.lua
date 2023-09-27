@@ -16,7 +16,6 @@ lsp.ensure_installed({
   'html',
   'cssls',
   'eslint',
-  'grammarly',
   'jsonls',
   'prismals',
   'tailwindcss',

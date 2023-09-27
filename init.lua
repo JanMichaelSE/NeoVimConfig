@@ -1,44 +1,8 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-TODO: Create a installation file for WSL and Linux (Ubuntu)
-
-Important things to install (A powershell script has been created so refer to the installation.ps1 file for Windows):
- - Chocolatey Package Manager (Windows Only)
- - Install through Choco: Zig & Gcc (Windows and Linux need Zig)
- - Install through Choco: ripgrep (Windows and Linux)
- - Install through Choco: lazygit (Windows and Linux)
- - Install Cmake (Windows Only)
- - git & node (Windows and Linux)
- - Nerd Font CascaydiaCove NF (Window and Linux)
- - Install VS Build Tools with C++ Tools included (Windows Only)
- - Install github cli for (Linux)
-    - https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-
-Important Steps for new device:
-  - Setup up Path variables for the following:
-  - Things like Cmake, Gcc and Clang
-
-Important Resources for Windows Setup
-  - https://github.com/nvim-lua/kickstart.nvim
-  - https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support
-  - https://github.com/nvim-telescope/telescope-fzf-native.nvim
-
-Important Troubleshooting for Linux:
-  - https://github.com/LunarVim/LunarVim/issues/3680
-
---]]
--- Set <space> as the leader key
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- [[ Install package manager ]]
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -52,11 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
 require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
@@ -175,8 +134,14 @@ require('lazy').setup({
     end,
   },
 
+  { 'nvim-treesitter/nvim-treesitter-context' },
+
   -- Manages floating terminal
-  { 'akinsho/toggleterm.nvim',    version = "*", config = true },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    config = true
+  },
 
   -- To manage long list of undos
   -- { "mbbill/undotree" },
@@ -202,9 +167,19 @@ require('lazy').setup({
     end,
   },
 
+  -- Markdown Previews
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreview", "MarkdownPreviewStop" },
+    lazy = false,
+    build = function() vim.fn["mkdp#util#install"]() end,
+    init = function()
+      vim.g.mkdp_theme = 'dark'
+    end
+  },
+
 }, {})
 
--- [[ Require Core Configuration ]]
 require('core')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
