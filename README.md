@@ -3,12 +3,13 @@
 ### Linux/WSL Installation
 
 Things that need to be installed for Linux (Need to create bash script)
-  - zig
+  - zig & gcc
   - ripgrep
   - lazygit
   - git & node
   - Nerd Font CascaydiaCove NF
   - github CLI
+  - treesitter-cli (optional)
 
 Resources useful for troubleshooting linux issues:
   - https://github.com/LunarVim/LunarVim/issues/3680
@@ -17,7 +18,7 @@ Resources useful for troubleshooting linux issues:
 
 Things that need to be installed for Windows (See PS script for tools):
   - Chocolatey Package Manager
-  - Install through Choco: zig
+  - Install through Choco: zig & gcc
   - Install through Choco: ripgrep
   - Install through Choco: lazygit
   - Install Cmake
